@@ -1,0 +1,25 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "ru-kit-js",
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "out": "docs/api",
+  "readme": "README.md",
+  "projectDocuments": [
+    "docs/requisites.md",
+    "docs/text.md"
+  ],
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeInternal": true,
+  "sort": [
+    "source-order"
+  ],
+  "navigationLinks": {
+    "GitHub": "https://github.com/nullvble/ru-kit-js",
+    "npm": "https://www.npmjs.com/package/ru-kit-js"
+  },
+  "treatWarningsAsErrors": false
+}

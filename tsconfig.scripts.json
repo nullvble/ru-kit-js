@@ -1,0 +1,5 @@
+{
+  // Скрипты проверяют собранный пакет (dist), поэтому типизируются только после `npm run build`.
+  "extends": "./tsconfig.json",
+  "include": ["scripts"]
+}

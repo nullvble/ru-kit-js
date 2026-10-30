@@ -1,0 +1,82 @@
+{
+  "name": "ru-kit-js",
+  "version": "1.0.0",
+  "description": "Russian-specific utilities: INN/OGRN/SNILS/BIK/bank account validation and test data generators, pluralization, amount in words, phone numbers, transliteration (GOST, passport), full names",
+  "keywords": [
+    "russia",
+    "russian",
+    "инн",
+    "inn",
+    "ogrn",
+    "огрн",
+    "snils",
+    "снилс",
+    "kpp",
+    "bik",
+    "бик",
+    "validation",
+    "pluralize",
+    "plural",
+    "сумма прописью",
+    "amount in words",
+    "num2str",
+    "phone",
+    "transliteration",
+    "транслитерация",
+    "slug",
+    "фио",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "nullvble",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nullvble/ru-kit-js.git"
+  },
+  "homepage": "https://nullvble.github.io/ru-kit-js/",
+  "bugs": {
+    "url": "https://github.com/nullvble/ru-kit-js/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc -p .",
+    "test": "tsx --test test/*.test.ts",
+    "test:dist": "tsc -p tsconfig.scripts.json && tsx scripts/smoke-test.ts",
+    "docs": "typedoc",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build && npm run test:dist"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.15",
+    "typedoc": "^0.28.20",
+    "typescript": "^5.9.3"
+  }
+}
